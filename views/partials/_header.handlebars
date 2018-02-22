@@ -1,0 +1,60 @@
+
+    <nav>
+        <div class="nav-wrapper container ">
+            <a href="/" class="brand-logo">SvNotes</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="fa fa-2x fa-bars"></i></a>
+
+            <ul class="right hide-on-med-and-down ">
+                {{#if user}}
+                <li><a href="/dashboard"><i class="fa fa-dashboard" aria-hidden="true"></i> Welcome {{user.firstName}} </a></li>
+               <li><a href="/notes"><i class="fa fa-book" aria-hidden="true"></i> All notes </a></li> 
+                <li>
+                    <a href="/notes/upload" class=""><i class="fa fa-upload" aria-hidden="true"></i> Upload Notes</a>
+                </li> 
+               <li><a href="/auth/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Signout </a></li>
+                {{else}}
+                 <li><a href="/about"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us </a></li>
+                <li><a href="/auth/google"><i class="fa fa-google-plus" aria-hidden="true"></i> SignIn with Google </a></li>  
+                {{/if}}
+                
+            </ul>
+            
+
+            <ul class="side-nav teal" id="mobile-demo">
+                {{#if user}}
+                 <li><a href="/dashboard"><i class="fa fa-dashboard" aria-hidden="true"></i> Dashboard</a></li>
+                 <div class="divider"></div>
+               <li><a href="/notes"><i class="fa fa-book" aria-hidden="true"></i> All notes </a></li>
+               <li class="divider">
+                
+               </li> 
+               <li><a href="/dashboard"><i class="fa fa-user" aria-hidden="true"></i> My notes </a></li> 
+               <li>
+                    <a href="/notes/upload" class="waves-effect  orange darken-4 waves-light "><i class="fa fa-2x fa-upload" aria-hidden="true"></i>Upload Notes</a>
+                </li> 
+                <li><a href="/auth/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Signout </a></li>
+
+                {{else}}
+                <li><a href="/auth/google">SignIn with Google<i class="fa fa-google-plus left" aria-hidden="true"></i></a></li>
+                <div class="divider"></div>
+                <li><a href="/about">About Us<i class="fa fa-info-circle left" aria-hidden="true"></i></a></li>
+                <div class="divider"></div>
+                <li>
+                    <a href="/notes/upload" class="waves-effect  orange darken-4 waves-light "><i class="fa fa-2x fa-upload" aria-hidden="true"></i>Upload Notes</a>
+                </li>
+                {{/if}}
+                
+            </ul>
+        </div>
+    </nav>
+
+{{#if user}}
+    
+    <div class="fixed-action-btn click-to-toggle">
+        <a  href="/notes/upload" class="btn-floating btn-large red pulse">
+            <i class="fa fa-2x fa-upload" aria-hidden="true"></i>
+        </a>
+
+    </div>
+
+    {{/if}}

@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="row">
+            {{#each data}}
+                <div class="col s12 m6 l4" id="card-upper">
+                    
+                    <div class="card" id="card">
+                        <div class="card-content" id="upper">
+                            <span class="chip red lighten-2 left card-title activator grey-text text-darken-4">Semester:{{semester}}th </span>
+                            <a class="right chip blue lighten-2" href="#">Unit: {{unit}}  
+                            </a>
+                        </div>
+                        <div class="card-image">
+                            <img id="img" src="/public/images/svnotes-crop1.png">
+                            <span class="card-title" id="card-title"><i class="fa fa-book"></i>{{subject}}</span>
+                        </div>
+                        <div class="card-content description center-align">
+                            <p>
+                                {{description}}
+                            </p>
+                        </div>
+           
+                        <div class="card-content center-align" id="description">
+                            <div class="chip right-align center">
+                                <img class="right-align" src="{{user.image}}"> {{user.firstName}} {{user.lastName}}
+                            </div>
+                        </div>
+                       
+                        <div class="card-action" id="links">
+                            <a target="_blank" class="button btn main-button" href="/{{path}}"><i class="fa fa-download"></i> Download</a>
+                            <a class="button btn right main-button" href="/notes/show/{{id}}"><i class="fa fa-eye"></i> View notes</a>
+                        </div>
+                    </div>
+                </div>
+     {{/each}}
+        </div>
+    </div>

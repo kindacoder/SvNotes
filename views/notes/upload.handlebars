@@ -1,0 +1,81 @@
+<div class="container">
+        <h3>Upload Notes</h3>
+        
+        <pre>Thanks for coming on this page</pre>
+        <div class="" style="padding:10px;font-size:20px">{{msg}}</div>
+        <br>
+        <div class="container">
+        <form action="/notes" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="input-field col s12">
+                   <select name="semester" required="" aria-required="true" >
+                              <option value="" disabled selected>Please select</option>
+                                  <option value="6">6th</option>
+                    </select>
+                    <label>Semester</label>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="input-field col s12">
+                   <select name="branch" required="" aria-required="true" >
+                              <option value="" disabled selected>Please select</option>
+                                      <option value="computer science">Computer science</option>
+                                      <option value="information technology">information technology</option>
+                   </select>
+                    <label>Branch</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select name="subject" required="" aria-required="true" >
+                              <option value="" disabled selected>Please select</option>
+                              <option value="Computer Networks">Computer Networks</option>
+                              <option value="Software Engineering">Software Engineering</option>
+                              <option value="Compiler Design">Compiler Design</option>
+                              <option value=" Parallel Algorithm "> Parallel Algorithm </option>
+                              <option value="Data Warehousing & Data Mining">Data Warehousing & Data Mining</option>
+                              <option value="Industrial Management">Industrial Management</option>
+                            </select>
+                    <label>Subject</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select multiple name="unit" required="" aria-required="true" >
+                              <option value="" disabled >Please select</option>
+                                  <option value="1">Unit 1</option>
+                                  <option value="2">Unit 2</option>
+                                  <option value="3">Unit 3</option>
+                                  <option value="4">Unit 4</option>
+                                  <option value="5">Unit 5</option>
+                    </select>
+                    <label>Unit</label>
+                </div>
+            </div>
+             <br>
+              <br>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea maxlength="100" id="description" class="materialize-textarea" name="description" data-length="100" required></textarea>
+                    <label for="textarea">Description max-characters: 100</label>
+                </div>
+            </div>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input name="files" type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <input class="btn" type="submit" value="Submit">
+        </form>
+        </div>
+
+    </div>

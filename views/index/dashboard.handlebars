@@ -1,0 +1,56 @@
+<h1 id="dashboard" class="text-center red lighten-2 center"><i class="fa fa-cog"></i> Dashboard</h1>
+<div class="" id="profile-card">
+        <div align="center" class="hoverable col s12 m6 center-align" id="profile">
+          <div class="card center-align blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title center-align"><i class="fa fa-address-card "></i> {{user.firstName}} {{user.lastName}}</span>
+              <p><i class="fa fa-university"></i> College : Galgotas College of Engineering and Technology </p>
+            </div>
+            <div class="card-action">
+              <i class="fa fa-2x fa-envelope"></i><p> Email: {{user.email}}</p>
+            </div>
+          </div>
+        </div>
+</div>
+<h3 id="hello" class="text-center blue center"><i class="fa fa-book"></i> My Notes</h3>
+
+<div class="container">
+    {{#if data}}
+        <div class="row">
+            {{#each data}}
+                <div class="col s12 m6 l4" id="card-upper">
+                    
+                    <div class="card" id="card">
+                        <div class="card-content" id="upper">
+                            <span class="chip red lighten-1 left card-title activator grey-text text-darken-4">Semester:{{semester}}th </span>
+                            <a class="right chip blue lighten-1" href="#">Unit: {{unit}}  
+                            </a>
+                        </div>
+                        <div class="card-image">
+                            <img id="img" src="/public/images/svnotes-crop1.png">
+                            <span class="card-title" id="card-title"><i class="fa fa-book"></i>{{subject}}</span>
+                        </div>
+                        <div class="card-content description center-align">
+                            <p>
+                                {{description}}
+                            </p>
+                        </div>
+           
+                        <div class="card-content center-align" id="description">
+                            <div class="chip right-align center">
+                                <img class="right-align" src="{{user.image}}"> {{user.firstName}} {{user.lastName}}
+                            </div>
+                        </div>
+                       
+                        <div class="card-action" id="links">
+                            <a target="_blank" class="button btn main-button" href="/{{path}}"><i class="fa fa-download"></i> Download</a>
+                            <a class="button btn right main-button" href="/notes/show/{{id}}"><i class="fa fa-eye"></i> View notes</a>
+                        </div>
+                    </div>
+                </div>
+     {{/each}}
+        </div>
+        {{else}}
+        <h5>You have not Shared any Notes yet. Please share your notes</h5>
+        {{/if}}
+    </div>

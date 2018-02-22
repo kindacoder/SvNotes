@@ -1,0 +1,93 @@
+.nav-wrapper {
+    width: 95%
+}
+
+#card-title {
+    background-color: teal !important;
+    padding: 0.1px;
+}
+
+#upper {
+    margin-bottom: -10px;
+    margin-top: -20px;
+}
+
+#card-upper {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#img {
+    height: 70% !important;
+    width: 100% !important
+}
+
+#description {
+    margin-top: -40px;
+}
+
+#links {
+    margin-top: -20px;
+}
+
+.container {
+    width: 90%
+}
+
+.description {
+    height: 120px;
+}
+
+.main-button {
+    padding: 4px;
+    padding-top: 0px;
+}
+
+#card {
+    border: 2px solid rgb(204, 10, 10);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    margin-top: 400px;
+}
+
+.chip {
+    /* padding-left: 10px; */
+    margin-left: -15px;
+}
+
+#profile-card {
+    margin: 0, auto;
+    margin-top: -25px;
+}
+
+#profile {
+    text-align: center;
+    margin: auto !important;
+}
+
+#dashboard {
+    margin-top: 2px;
+}
+
+#hello {
+    margin-top: 10px;
+}
+
+#download-btn {
+    margin-top: 30px;
+}
+
+#show-page {
+    margin-left: 10px;
+}
